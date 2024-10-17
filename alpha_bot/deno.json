@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-env --allow-read --allow-sys --allow-run --allow-net main.ts"
+  },
+  "imports": {
+    "@spawn/bash": "jsr:@spawn/bash@^0.0.1",
+    "@std/assert": "jsr:@std/assert@1"
+  },
+  "nodeModulesDir": "auto"
+}
