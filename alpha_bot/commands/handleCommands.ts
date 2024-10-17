@@ -1,5 +1,5 @@
 import * as discord from "npm:discord.js";
-import * as info from "npm:systeminformation";
+
 import { ping } from "./cmds/ping.ts";
 
 export async function handleCommands(interaction: discord.Interaction) {
