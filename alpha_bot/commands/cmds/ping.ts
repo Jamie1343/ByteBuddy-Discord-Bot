@@ -30,7 +30,7 @@ async function CPULoad() {
 async function CPUUsage() {
   const coreInfo = info.cpuCurrentSpeed().then(async (cpu) => {
     const load = await CPULoad();
-    let cpuCoreInfo: Array<string> = [];
+    const cpuCoreInfo: Array<string> = [];
 
     for (let i = 1; i <= load.cores; i++) {
       cpuCoreInfo.push(`${i}. ${cpu.cores[i - 1]}Ghz`);
@@ -44,7 +44,7 @@ async function CPUUsage() {
 async function CPUTemps() {
   const temps = info.cpuTemperature().then(async (cpu) => {
     let tempNum = -1;
-    const pachageTemp = cpu.main;
+
     const coresUsage = await CPUUsage();
     const cpuInfo = coresUsage.map((core) => {
       tempNum++;

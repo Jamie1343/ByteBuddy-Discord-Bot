@@ -1,4 +1,6 @@
 # Logs
+/alpha_bot/commands/registerCommands.ts
+/alpha_bot/commands/registerCommandsMain.ts
 
 deploy.*
 logs
