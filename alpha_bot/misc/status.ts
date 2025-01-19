@@ -48,38 +48,26 @@ export async function botStatus(client: discord.Client) {
         uptimeMins = 0;
       }
 
-      const CPUInfo = info.cpu().then((cpu) => {
-        return cpu;
-      });
-
-      function CPUPackageUsage() {
+      function CPUPackageUsage2() {
         const load = info.currentLoad().then((cpu) => {
           return cpu.currentLoad.toFixed(2);
         });
         return load;
       }
 
-      function CPUPackageTemp() {
+      function CPUPackageTemp2() {
         const temp = info.cpuTemperature().then((temp) => {
           return temp.main;
         });
         return temp;
       }
 
-      const GPUInfo = info.graphics().then((gpu) => {
-        return gpu;
-      });
-
-      const systemInfo = info.system().then((sys) => {
-        return sys;
-      });
-
       const statusEdit = new discord.EmbedBuilder()
         .setTitle("Alpha Bot Status")
         .setDescription(
           `Motherboard - ${(await systemInfo).model}\n**CPU** - ${(await CPUInfo).brand}\n**GPU** - ${
             (await GPUInfo).controllers[0].model
-          }\n**CPU Package Usage** - ${await CPUPackageUsage()}%\n**CPU Package Temp** - ${await CPUPackageTemp()}°C\n**Uptime** ${uptimeHours}h ${uptimeMins}m ${uptimeSeconds}s`
+          }\n**CPU Package Usage** - ${await CPUPackageUsage2()}%\n**CPU Package Temp** - ${await CPUPackageTemp2()}°C\n**Uptime** ${uptimeHours}h ${uptimeMins}m ${uptimeSeconds}s`
         );
 
       sent.edit({ embeds: [statusEdit] });

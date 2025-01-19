@@ -13,14 +13,6 @@ const con = sql.createPool({
   database: Deno.env.get("DBNAME"),
 });
 
-con.getConnection(function (err) {
-  if (!err) {
-    console.log("Database is connected ... nn");
-  } else {
-    console.log("Error connecting database ... nn");
-  }
-});
-
 const client = new discord.Client({ intents: [1] });
 
 client.on("ready", () => {

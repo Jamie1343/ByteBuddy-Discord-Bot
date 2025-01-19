@@ -25,6 +25,7 @@
     "npm:@types/ms@*": "0.7.34",
     "npm:@types/mysql@*": "2.15.26",
     "npm:@types/node@*": "22.5.4",
+    "npm:create-next-app@latest": "15.1.5",
     "npm:discord-api-types@*": "0.37.102",
     "npm:discord.js@*": "14.16.3",
     "npm:fs-ext@2.0.0": "2.0.0",
@@ -276,6 +277,9 @@
     },
     "core-util-is@1.0.3": {
       "integrity": "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="
+    },
+    "create-next-app@15.1.5": {
+      "integrity": "sha512-BR54P2qTUcnF79q94R1xVV0nTEAp69+IeNuHQShfuQLaB3kuXwqT1BTNss2HPnk9IrN0CRpBoVNBTJ9f/TB2bg=="
     },
     "debug@4.3.7": {
       "integrity": "sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==",
